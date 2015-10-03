@@ -1,0 +1,16 @@
+{
+    "name": "Proyecto de PHP Orientado a Objetos",
+    "description": "Proyecto enfocado al aprendizaje del paradigama através de PHP",
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.3",
+        "codeception/codeception" : "*",
+        "dompdf/dompdf" : "0.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            
+        }
+    }
+}
