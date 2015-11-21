@@ -48,5 +48,24 @@
 	       	   	return false;
 	       	}
 		}
+
+		public function guardar($cumple, $nombre)
+		{
+			// 26 min + 26 may + 10 num; n = 62
+			// r = 6
+			// ... Número de permutaciones posibles = 62^6 = 56,800,235,584
+		    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		    $clave = '';
+		    for ($i = 0; $i < 6; $i++) {
+		        $clave .= $characters[rand(0, strlen($characters))];
+		    }
+		    $diff = abs(strtotime(date('y-m-d')) - strtotime($cumple));
+			$years = floor($diff / (365*60*60*24));
+			$months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+			$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+			$array2 = explode(" ", $nombre);
+			$primerNombre = $array2[0];
+			$apellido = $array2[1];
+		}
 	}
 ?>
